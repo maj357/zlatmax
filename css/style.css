@@ -1,5 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:500,600,700&display=swap);
-@charset "UTF-8";
 @font-face {
   font-family: icons;
   font-display: swap;
@@ -177,12 +176,6 @@ body {
   min-width: 0;
 }
 
-/*
-(i) Стили будут применяться ко 
-всем классам содержащим *__container
-Например header__container, main__container и т.д.
-Снипет (HTML): cnt
-*/
 [class*=__container] {
   max-width: 99.375rem;
   box-sizing: content-box;
@@ -317,6 +310,11 @@ body.popup-show::after {
   }
 }
 
+@media (max-width: 61.99875em) {
+  .menu-top-header {
+    display: none;
+  }
+}
 .menu-top-header__list {
   display: flex;
   row-gap: 5px;
@@ -387,12 +385,14 @@ body.popup-show::after {
     font-size: 1.25rem;
   }
 }
+
 @media (max-width: 61.99875em) {
-  .menu-top-header {
-    display: none;
+  .menu {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: flex-end;
   }
 }
-
 @media (max-width: 61.99875em) {
   .menu__body {
     position: fixed;
@@ -421,13 +421,6 @@ body.popup-show::after {
   }
   .menu-open .menu__body::before {
     left: 0;
-  }
-}
-@media (max-width: 61.99875em) {
-  .menu {
-    flex: 1 1 auto;
-    display: flex;
-    justify-content: flex-end;
   }
 }
 
@@ -818,7 +811,7 @@ body.popup-show::after {
   }
 }
 
-@media (max-width: 29.99875em) {
+@media (max-width: 61.99875em) {
   .menu-catalog {
     position: fixed;
     top: 0;
@@ -958,7 +951,7 @@ body.popup-show::after {
   }
 }
 
-@media (max-width: 29.99875em) {
+@media (max-width: 61.99875em) {
   .sub-menu-catalog {
     position: fixed;
     top: 0;
